@@ -1,0 +1,45 @@
+html , body , #root{
+   background-color: black; 
+   text-align: center;
+   font-weight: 600;
+   color:white;
+}
+nav{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration: none;
+   
+}
+.html , body , #root{
+	width: 100%;
+	max-width: 100%;
+	margin: auto auto;
+}
+.aspecto{
+   background-color: darkblue;
+   font-weight: 600;
+}
+.marcador{
+   font-size: 22px;
+   color: white;
+   background-color: rgb(5, 96, 233);
+}
+.aspecto ul{
+   font-size: 20px;
+   color: white;
+}
+ul li:hover{
+   padding-left: 50px;
+}
+.black{
+   color: black;
+}
+.white{
+   color: white;
+}
+img{
+   text-align: center;
+    height: 30%;
+    width: 80%;
+}
