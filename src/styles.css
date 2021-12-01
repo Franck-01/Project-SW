@@ -9,6 +9,15 @@ nav{
    padding: 0;
    list-style: none;
    text-decoration: none;
+   display: block;
+   height: 100%;
+   width: 100%;
+   line-height: 65px;
+   padding-right: 70%;
+   box-sizing: border-box;
+   border-top: 1px solid rgba(255, 255, 255, .1);
+   border-bottom: 1px solid black;
+   transition: .4s;
    
 }
 .html , body , #root{
@@ -35,10 +44,7 @@ ul li:hover{
 .black{
    color: black;
 }
-.white{
-   color: white;
-}
-img{
+.imagen{
    text-align: center;
     height: 30%;
     width: 80%;
