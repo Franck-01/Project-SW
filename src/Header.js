@@ -1,9 +1,8 @@
-import NavBar from "./components/NavBar";
+const Header = () => {
 
-const saludo = "Bienvenido a la Armada"
+    const saludo = "Bienvenido a la Armada"
 console.log(saludo)
 
-const Header = () => {
     return (
         <header>
             <div className="imagen">
@@ -11,7 +10,6 @@ const Header = () => {
                 <h2 className="white">Escoje tus naves, inspecciona el arsenal y crea la flota mas poderosa que la galaxia haya visto</h2>
                 <h3>{saludo}</h3>
             </div>
-            <NavBar/>
         </header>
     );
 }

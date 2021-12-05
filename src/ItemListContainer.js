@@ -1,9 +1,8 @@
-const ItemListContainer = () => {
-    const greeting = "Inspeccionando la flota"
-    console.log(greeting)
+const ItemListContainer = (prop) => {
+
     return (
         <div>
-            
+            {prop.greeting}
         </div>
     )
 }
