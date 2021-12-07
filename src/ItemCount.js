@@ -1,6 +1,39 @@
-import {useState} from "react"
+import {useState , useEffect} from "react"
 
-const Section = () => {
+const naves = [
+    { bando : "Republica Galactica", cazas : "ARC-170", interceptores : "Ala-V", bombarderos : "Ala-Y"},
+    { bando : "Alianza Separatista", cazas : "Droides Buitre", interceptores : "Tri-caza", bombarderos : "Hiena"},
+    { bando : "Imperio Galactico", cazas : "TIE Fighter", interceptores : "TIE Interceptor", bombarderos : "Bomber TIE"},
+    { bando : "Alianza Rebelde", cazas : "Ala-X", interceptores : "Ala-A", bombarderos : "Ala-Y"},
+]
+
+const ItemCount = () => {
+
+    const [listo,carga] = useState("cargando los archivos...")
+    const [objeto,respuesta] = useState([])
+
+    useEffect(() => {
+
+        const promesa = new Promise((res, rej) => {
+
+            setTimeout(() => {
+                if (Math.random() > 0.5) {
+                    res(naves)
+                }else{
+                    rej()
+                }
+            }, 2000)
+        })
+        promesa
+            .then((resultado) => {
+                carga("Todo salio bien")
+                respuesta(resultado)
+            })
+            .catch(() => {
+                carga("Todo salio Mal")
+            })
+    }, [])
+
 
     const destInit = 0
     const [dest, contadorA] = useState(destInit)
@@ -43,6 +76,8 @@ const Section = () => {
         <section>
             <div className="section">
             <h1>Crea tu flota</h1>
+            <h3>{objeto}</h3>
+            <h3>{listo}</h3>
             <p>cantidad de destructores clase Venator : {dest}</p>
                 <button onClick={CDestructores}>aumentar</button>
                 <button onClick={destructores}>disminuir</button>
@@ -61,4 +96,4 @@ const Section = () => {
     )
 }
 
-export default Section;
+export default ItemCount;
