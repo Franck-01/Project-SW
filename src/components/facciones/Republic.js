@@ -1,6 +1,6 @@
 import {useState} from "react"
 
-const ItemCount = () => {
+const Republic = () => {
 
     const destInit = 0
     const [dest, contadorA] = useState(destInit)
@@ -42,16 +42,17 @@ const ItemCount = () => {
     return (
         <section>
             <div className="section">
-            <p>cantidad de destructores: {dest}</p>
+            <h1>Crea tu flota</h1>
+            <p>cantidad de destructores clase Venator : {dest}</p>
                 <button onClick={CDestructores}>aumentar</button>
                 <button onClick={destructores}>disminuir</button>
-            <p>cantidad de cazas: {caz}</p>
+            <p>cantidad de cazas clase ARC-170 : {caz}</p>
                 <button onClick={CCazas}>aumentar</button>
                 <button onClick={cazas}>disminuir</button>
-            <p>cantidad de bombarderos: {bomb}</p>
+            <p>cantidad de bombarderos clase Ala-Y : {bomb}</p>
                 <button onClick={CBombarderos}>aumentar</button>
                 <button onClick={bombarderos}>disminuir</button>
-            <p>cantidad de interceptores: {inter}</p>
+            <p>cantidad de interceptores clase Ala-V : {inter}</p>
                 <button onClick={CInterceptores}>aumentar</button>
                 <button onClick={interceptores}>disminuir</button>
             </div>
@@ -60,4 +61,4 @@ const ItemCount = () => {
     )
 }
 
-export default ItemCount;
+export default Republic;

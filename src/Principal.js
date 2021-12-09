@@ -1,15 +1,18 @@
-import ItemCount from "./ItemCount"
-import NavBar from "./components/NavBar"
 import ItemListContainer from "./ItemListContainer"
 
-const Principal = () => {
+const Principal = ({productos,children}) => {
 
     return (
+        <>
         <div>
-            <NavBar/>
-            <ItemListContainer greeting="Inspeccionando la flota"/>
-            <ItemCount/>
+            {children}
+
+            {productos.map((elemento,indice)=>{
+                return <p>{elemento.nombre}</p>
+            })}
         </div>
+        <ItemListContainer/>
+        </>
     )
 }
 
