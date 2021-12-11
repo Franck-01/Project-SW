@@ -1,14 +1,18 @@
 import {useState} from "react"
 
-const ItemCount = ({ stock, onAdd, initial }) => {
+const ItemCount = ({ onAdd, initial }) => {
 
-    const [dest, contadorA] = useState(20);
-    const [caz, contadorB] = useState(300);
-    const [bomb, contadorC] = useState(240);
-    const [inter, contadorD] = useState(300);
+    const stockA = 20;
+    const stockB = 300;
+    const stockC = 240;
+    const stockD = 300;
+    const [dest, contadorA] = useState(1);
+    const [caz, contadorB] = useState(30);
+    const [bomb, contadorC] = useState(12);
+    const [inter, contadorD] = useState(10);
 
     const CDestructores = () => {
-        if (dest < stock) {
+        if (dest < stockA) {
             contadorA(dest + 1);
         }
         console.log("Destructores estelares")
@@ -19,7 +23,7 @@ const ItemCount = ({ stock, onAdd, initial }) => {
         }
     }
     const CCazas = () => {
-        if (caz < stock) {
+        if (caz < stockB) {
             contadorB(caz + 5);
         }
         console.log("Cazas de combate")
@@ -30,7 +34,7 @@ const ItemCount = ({ stock, onAdd, initial }) => {
         }
     }
     const CBombarderos = () => {
-        if (bomb < stock) {
+        if (bomb < stockC) {
             contadorC(bomb + 3);
         }
         console.log("Bombarderos de presicion")
@@ -41,7 +45,7 @@ const ItemCount = ({ stock, onAdd, initial }) => {
         }
     }
     const CInterceptores = () => {
-        if (inter < stock) {
+        if (inter < stockD) {
             contadorD(inter + 2);
         }
         console.log("Interceptores de escolta")
