@@ -1,16 +1,9 @@
 import ItemListContainer from "./ItemListContainer"
 
-const Principal = ({productos,children}) => {
+const Principal = () => {
 
     return (
         <>
-        <div>
-            {children}
-
-            {productos.map((elemento,indice)=>{
-                return <p>{elemento.nombre}</p>
-            })}
-        </div>
         <ItemListContainer/>
         </>
     )

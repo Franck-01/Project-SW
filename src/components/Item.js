@@ -4,7 +4,7 @@ import "./../styles.css"
 const Item = ({naves}) => {
     
     const handleOnAdd = () => {
-        console.log("agregaste el producto al carrito");
+        console.log("otra a la lista");
     }
 
     return (
@@ -14,7 +14,8 @@ const Item = ({naves}) => {
                     {naves.faccion}
                 </h2>
             </div>
-            <ItemCount onAdd={handleOnAdd}/>
+            <img src={naves.flag} alt={naves.faccion} className="ItemImg"/>
+            <ItemCount stock={naves.stock} onAdd={handleOnAdd} initial={10}/>
         </div>
     )
 }

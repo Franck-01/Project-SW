@@ -6,7 +6,7 @@ const ItemList = ({naves}) => {
     return (
         <div>
             <ul className="ListGroup">
-            {naves.map(naves =><Item key={naves.facciones} naves={naves}/>)}
+            {naves.map(naves =><Item producto={naves} key={naves.faccion} naves={naves}/>)}
         </ul>
         </div>
     )

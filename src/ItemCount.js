@@ -1,59 +1,81 @@
 import {useState} from "react"
 
-const ItemCount = () => {
+const ItemCount = ({ stock, onAdd, initial }) => {
 
-    const destInit = 0
-    const [dest, contadorA] = useState(destInit)
-    const cazInit = 0
-    const [caz, contadorB] = useState(cazInit)
-    const bombInit = 0
-    const [bomb, contadorC] = useState(bombInit)
-    const interInit = 0
-    const [inter, contadorD] = useState(interInit)
+    const [dest, contadorA] = useState(20);
+    const [caz, contadorB] = useState(300);
+    const [bomb, contadorC] = useState(240);
+    const [inter, contadorD] = useState(300);
+
     const CDestructores = () => {
-        console.log("Destructores clase Venator")
-        contadorA(dest + 1)
+        if (dest < stock) {
+            contadorA(dest + 1);
+        }
+        console.log("Destructores estelares")
     }
     const destructores = () => {
-        contadorA(dest - 1)
+        if (dest > initial) {
+            contadorA(dest - 1);
+        }
     }
     const CCazas = () => {
-        console.log("Cazas clase ARC-170")
-        contadorB(caz + 30)
+        if (caz < stock) {
+            contadorB(caz + 5);
+        }
+        console.log("Cazas de combate")
     }
     const cazas = () => {
-        contadorB(caz - 30)
+        if (caz > initial) {
+            contadorB(caz - 5);
+        }
     }
     const CBombarderos = () => {
-        console.log("Bombarderos clase Ala-Y")
-        contadorC(bomb + 12)
+        if (bomb < stock) {
+            contadorC(bomb + 3);
+        }
+        console.log("Bombarderos de presicion")
     }
     const bombarderos = () => {
-        contadorC(bomb - 12)
+        if (bomb > initial) {
+            contadorC(bomb - 3);
+        }
     }
     const CInterceptores = () => {
-        console.log("Interceptores clase Ala-V")
-        contadorD(inter + 10)
+        if (inter < stock) {
+            contadorD(inter + 2);
+        }
+        console.log("Interceptores de escolta")
     }
     const interceptores = () => {
-        contadorD(inter - 10)
+        if (inter > initial) {
+            contadorD(inter - 2);
+        }
     }
 
     return (
         <section>
             <div className="section">
-            <p>cantidad de destructores: {dest}</p>
-                <button onClick={CDestructores}>aumentar</button>
-                <button onClick={destructores}>disminuir</button>
-            <p>cantidad de cazas: {caz}</p>
-                <button onClick={CCazas}>aumentar</button>
-                <button onClick={cazas}>disminuir</button>
-            <p>cantidad de bombarderos: {bomb}</p>
-                <button onClick={CBombarderos}>aumentar</button>
-                <button onClick={bombarderos}>disminuir</button>
-            <p>cantidad de interceptores: {inter}</p>
-                <button onClick={CInterceptores}>aumentar</button>
-                <button onClick={interceptores}>disminuir</button>
+            <p>{dest}</p>
+            <p>{caz}</p>
+            <p>{bomb}</p>
+            <p>{inter}</p>
+                <div>
+                <p>cantidad de destructores: {dest}</p>
+                    <button onClick={CDestructores}>aumentar</button>
+                    <button onClick={destructores}>disminuir</button>
+                <p>cantidad de cazas: {caz}</p>
+                    <button onClick={CCazas}>aumentar</button>
+                    <button onClick={cazas}>disminuir</button>
+                <p>cantidad de bombarderos: {bomb}</p>
+                    <button onClick={CBombarderos}>aumentar</button>
+                    <button onClick={bombarderos}>disminuir</button>
+                <p>cantidad de interceptores: {inter}</p>
+                    <button onClick={CInterceptores}>aumentar</button>
+                    <button onClick={interceptores}>disminuir</button>
+                    <button onClick={() => onAdd()} type='button'>
+                        Agrega a tu flota
+                    </button>
+                </div>
             </div>
         </section>
         
