@@ -1,0 +1,164 @@
+[
+    {
+        "name": "Venator",
+        "model": "Destructor Estelar",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/e/ec/Venator_clonewars.jpg/revision/latest?cb=20190113165500",
+        "description": "Puede transportar 420 cazas, como cazas de combate ARC-170 o caza de cabeza Clon Z-95, bombarderos Ala-Y y interceptores Ala-V, incluyendo 40 lanzaderas de infantería LAAT"
+    },
+    {
+        "name": "Acclamator",
+        "model": "Carguero",
+        "img_url": "https://static.wikia.nocookie.net/starwars/images/b/b2/AcclamatorII-CotR.png/revision/latest?cb=20201019140232",
+        "description": "Cumple un papel como carguero de tropas, aunque es cumple la función de apoyo para los Venator"
+    },
+    {
+        "name": "Arquitens",
+        "model": "Crucero Ligero",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/d/d5/Arquitens.png/revision/latest?cb=20171121013717",
+        "description": "Es utilizado como un burlador de bloqueos, con la capacidad de infiltrarse entre naves enemigas"
+    },
+    {
+        "name": "ARC-170 Starfighter",
+        "model": "Caza de combate",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/3/32/Starfigher.jpg/revision/latest?cb=20120429113036",
+        "description": "Es un caza de combate pesado, es tripulado por tres clones: un piloto, un artillero delantero y un artillero de cola, utilizado para combate y reconocimiento"
+    },
+    {
+        "name": "Cazador de Cabeza Clon Z-95",
+        "model": "Caza de combate",
+        "img_url": "http://pm1.narvii.com/6245/0b971eb50fa1bcd128c4ebd2df779627e535c512_00.jpg",
+        "description": "Es un caza de combate, más ligero que el ARC-170, utilizado para labores de escolta y combate, con un piloto"
+    },
+    {
+        "name": "(BTL-B) Ala-Y",
+        "model": "Bombardero",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/4/45/BTL-B_Y-wing_BF2.png/revision/latest?cb=20200714002000",
+        "description": "Un caza bombardero, que cuenta con un piloto y un copiloto artillero, utilizado para operaciones de bombardero de precisión"
+    },
+    {
+        "name": "Nimbus Ala-V",
+        "model": "Interceptor",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/a/a9/V-wing_BF2.png/revision/latest?cb=20171116021944",
+        "description": "Es un caza interceptor, utilizado en la mayoría de los casos como escolta, con un piloto"
+    },
+    {
+        "name": "Mano Invisible",
+        "model": "Carguero/ Destructor",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/d/d7/InvisibleHandROTS.png/revision/latest?cb=20170701213949",
+        "description": "Su hangar cuenta con 240 cazas, como los cazas de combate Buitres Droides, bombarderos Hiena e interceptores Tri-caza, sumando 400 de naves de asalto terrestre C-9979"
+    },
+    {
+        "name": "Lucrehulk",
+        "model": "Carguero mejorado",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/2/2d/Mar_Tuuk%27s_flagship.jpg/revision/latest?cb=20091008203758",
+        "description": "Tiene la capacidad para transportar más de 300 naves de combate y más de 100 naves de aterrizaje terrestre"
+    },
+    {
+        "name": "Munificente",
+        "model": "Fragata",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/3/3a/BanesBorrowedMunificent-CoD.jpg/revision/latest?cb=20180801013401",
+        "description": "Utilizada como nave de apoyo de flota, tenía la capacidad de mantener el combate de forma estática u ofensiva en caso de ser necesaria"
+    },
+    {
+        "name": "Droide Buitre",
+        "model": "Caza de combate",
+        "img_url": "https://i.pinimg.com/originals/6b/aa/b4/6baab4074a5b10d89089e3d820021210.png",
+        "description": "Droide de combate automatizado, que cuenta con misiles de rastreo y modalidad de combate en inmovilidad (que puede disparar sin que deba estar volando)"
+    },
+    {
+        "name": "Hiena",
+        "model": "Bombardero",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/e/e3/HyenaBomber-SWE.jpg/revision/latest?cb=20190724230944",
+        "description": "Es un modelo similar al Droide Buitre, solo que esta nave se especializa en los bombardeos"
+    },
+    {
+        "name": "Tri-caza",
+        "model": "Interceptor",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/a/a0/DroidTrifighter-TCWs3BR2.png/revision/latest?cb=20171010174457",
+        "description": "Era un caza de gran maniobrabilidad ya que al no tener nada orgánico podía efectuar movimientos más bruscos"
+    },
+    {
+        "name": "Imperial I",
+        "model": "Destructor Estelar",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/b/bf/Chimaera-TCGIE.png/revision/latest?cb=20170301224624",
+        "description": "Posee un hangar, con la capacidad de albergar a 300 naves, de las cuales se encuentras, los cazas de combate TIE/LN, bombarderos TIE/sa e interceptores TIE/IN añadiendo un grupo limitado de lanzaderas Lambda"
+    },
+    {
+        "name": "Ejecutor",
+        "model": "Super Destructor Estelar",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/a/a1/Executor2_BF2.png/revision/latest?cb=20190120203214",
+        "description": "Presenta las mismas características que el destructor estelar Imperial I, solo que, en mayores proporciones, tanto en armamento, como en capacidad de transporte de naves"
+    },
+    {
+        "name": "Interdictor",
+        "model": "Fragata",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/9/9c/InterdictorClassSD-EGTW.jpg/revision/latest?cb=20171115184143",
+        "description": "Es una variable más pequeña que la clase Imperial I, cuenta con un generador de gravedad que es utilizado para impedir que alguna nave pueda saltar al hiperespacio"
+    },
+    {
+        "name": "Arquitens",
+        "model": "Crucero Ligero",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/c/ca/SWBII-ImperialCruiser.png/revision/latest?cb=20190127193840",
+        "description": "Es un modelo exacto de la versión usada durante la Guerras de los Clones, utilizado como apoyo ligero o patrullaje en el borde exterior"
+    },
+    {
+        "name": "TIE/LN",
+        "model": "Caza de combate",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/9/92/TIEfighter2-Fathead.png/revision/latest?cb=20190506153548",
+        "description": "Cuenta con amplios paneles solares en ambos lados de sus naves, proporcionándole una cobertura parcial, con la necesidad de un piloto era el caza estándar en las filas del imperio"
+    },
+    {
+        "name": "TIE/D",
+        "model": "Caza de combate",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/4/44/SWB_TIE_Defender.png/revision/latest?cb=20171101013922",
+        "description": "Era una nave de alto rendimiento, utilizada por los pilotos más experimentados de la armada imperial, era la única de su tipo que contaba con escudos muy resistentes, solo que nunca logre producirse en masa"
+    },
+    {
+        "name": "TIE/sa",
+        "model": "Bombardero",
+        "img_url": "https://swrpggm.com/wp-content/uploads/2021/03/TIEBOMBER_FE.png",
+        "description": "Es un caza más grande y menos maniobrable que el TIE/LN, era utilizado en misiones de destrucción de naves y bombardeos de precisión"
+    },
+    {
+        "name": "TIE/IN",
+        "model": "Inteceptor",
+        "img_url": "https://pm1.narvii.com/6344/72cd5c4b56277029154cde429d301ce85bdfc046_hq.jpg",
+        "description": "Este caza de gran velocidad y maniobrabilidad, rivalizando contra el interceptor Ala-A de la rebelión"
+    },
+    {
+        "name": "Home One",
+        "model": "Crucero",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/2/28/Mchomeonerear.jpg/revision/latest?cb=20170630014736",
+        "description": "Con su amplio tamaño, contaba con 380 cazas estelares, una mezcla de Ala-A, Ala-B, Ala-X y Ala-Y y una limitada cantidad Ala-U"
+    },
+    {
+        "name": "CR90",
+        "model": "Corbeta",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/4/47/Rebels-TantiveIVConceptArt-CroppedBackground.png/revision/latest?cb=20171016180243",
+        "description": "Es utilizado como un burlador de bloqueos, con la capacidad de infiltrarse entre naves enemigas"
+    },
+    {
+        "name": "(T-65) Ala-X",
+        "model": "Caza de combate",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/8/80/X-wing_Fathead.png/revision/latest?cb=20190624005938",
+        "description": "Era un caza de combate multi-posición, sirve tanto en operaciones de escolta, defensa y combate. Aunque este cuenta con 4 alas, se lo ve como una variante mejorado del Cazador de Cabeza Clon Z-95"
+    },
+    {
+        "name": "(BTL-A4) Ala-Y",
+        "model": "Bombardero",
+        "img_url": "http://pm1.narvii.com/6379/3e638e166d78b9e37f76131f497473bd20b18e86_00.jpg",
+        "description": "Esta nave es una versión exacta del bombardeo de la república (BTL-B) Ala-Y, solo que no tiene su cubierta"
+    },
+    {
+        "name": "(RZ-1) Ala-A",
+        "model": "Interceptor",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/8/8d/A-wing_DICE.png/revision/latest?cb=20180319210024",
+        "description": "Es uno de los primeros cazas usados por la rebelión, una nave veloz y ágil, siendo una caza capas de rivalizar contra el interceptor TIE/IN imperial"
+    },
+    {
+        "name": "(A/SF-01) Ala-B",
+        "model": "Bombardero",
+        "img_url": "https://static.wikia.nocookie.net/esstarwars/images/e/e2/Ala-_B.jpg/revision/latest?cb=20090219014659",
+        "description": "Es una caza de gran tamaño y con un armamento pesado, cuenta con tres cañones normales y un rayo unificador, con la capacidad de lograr un daño increíble a las naves capitales"
+    }
+]

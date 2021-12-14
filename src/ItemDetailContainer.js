@@ -13,12 +13,7 @@ const ItemDetailContainer = () => {
 
             setTimeout(() => {
                 if (Math.random() > 0.5) {
-                    rep('https://swapi.dev/api/vehicles/')
-                    .then(res=>res.json())
-                    .then(json=>{
-                        setItems(json)
-                    })
-                    .catch(err=>console.log(err))
+                    rep('https://mocki.io/v1/aa5c9f7b-1137-4b79-9875-b398ba281af4')
                 }else{
                     rej()
                 }
