@@ -4,7 +4,7 @@ import ItemDetail from "./components/ItemDetail"
 
 const ItemDetailContainer = () => {
 
-    const [mensaje, setMensaje] = useState("Cargando...")
+    const [mensaje, setMensaje] = useState("Cargando API...")
     const [item, setItems] = useState([])
 
     useEffect(()=>{
@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
 
             setTimeout(() => {
                 if (Math.random() > 0.5) {
-                    rep('https://mocki.io/v1/aa5c9f7b-1137-4b79-9875-b398ba281af4')
+                    rep('https://mocki.io/v1/b3b2e087-740b-4413-9ab7-3732ce11737f')
                 }else{
                     rej()
                 }

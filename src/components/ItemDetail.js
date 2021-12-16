@@ -7,7 +7,7 @@ const ItemDetail = () => {
 
     useEffect(()=>{
 
-        fetch('https://mocki.io/v1/aa5c9f7b-1137-4b79-9875-b398ba281af4')
+        fetch('https://mocki.io/v1/b3b2e087-740b-4413-9ab7-3732ce11737f')
             .then(res=>res.json())
             .then(json=>{
                 setItems(json)
