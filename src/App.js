@@ -1,6 +1,6 @@
 import Header from "./Header"
 import Principal from "./Principal"
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Router} from "react-router-dom"
 
 const App = () => {
 
@@ -8,7 +8,7 @@ const App = () => {
         <>
             <BrowserRouter>
                 <Header/>
-                <Principal/>
+                    <Principal/>
             </BrowserRouter>
         </>
     )

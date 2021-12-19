@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import "./../styles.css"
 
-const ItemDetail = () => {
+const ItemDetail = ( {item}) => {
 
-    const [item, setItems] = useState([])
+    const [items, setItems] = useState([])
 
     useEffect(()=>{
 
@@ -19,11 +19,11 @@ const ItemDetail = () => {
     return (
         <div>
             <ul>
-            {item.map(item=>(
-                <li key={item.name}>
-                    <h3>{item.name}</h3>
-                    <h4>{item.model}</h4>
-                    <p>{item.description}</p>
+            {items.map(items=>(
+                <li key={items.name}>
+                    <h3>{items.name}</h3>
+                    <h4>{items.model}</h4>
+                    <p>{items.description}</p>
                 </li>
             ))}
             </ul>
