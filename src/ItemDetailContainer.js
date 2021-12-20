@@ -25,7 +25,8 @@ const ItemDetailContainer = () => {
                 setItems(resultado)
             })
             .catch(() => {
-                setMensaje("Algo fallo")
+                setMensaje("Cargando los archivos")
+
             })
     },[])
 
@@ -33,6 +34,7 @@ const ItemDetailContainer = () => {
         return (
             <div>
                 <h1>{mensaje}</h1>
+                {useEffect}
             </div>
         )
     }else{

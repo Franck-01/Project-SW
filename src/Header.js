@@ -1,5 +1,5 @@
 import NavBar from "./components/NavBar"
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -9,9 +9,9 @@ const Header = () => {
         <>
         <header>
             <div className="imagen">
-                <NavLink to="/">
+                <Link to="/">
                     <img src="images/SWTFA.png"/>
-                </NavLink>
+                </Link>
                 <h2 className="white">Escoje tus naves, inspecciona el arsenal y crea la flota mas poderosa que la galaxia haya visto</h2>
                 <h3>{saludo}</h3>
             </div>
