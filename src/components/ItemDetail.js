@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import "./../styles.css"
 
-const ItemDetail = ( {item}) => {
+const ItemDetail = () => {
 
     const [items, setItems] = useState([])
 

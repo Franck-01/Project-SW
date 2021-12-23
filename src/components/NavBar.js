@@ -11,9 +11,6 @@ const NavBar = () => {
             <Link to="/">
                 <h2 className="marcador">Inicio</h2>
             </Link>
-            <Link to="/item">
-                <h2 className="marcador">Listado</h2>
-            </Link>
             
             <ul>
                 <li className="Rep"><NavLink to="/categorias"><Button variant="primary">Republica</Button></NavLink></li>
@@ -21,6 +18,9 @@ const NavBar = () => {
                 <li className="Imp"><NavLink to="/categorias"><Button variant="primary">Imperio</Button></NavLink></li>
                 <li className="Reb"><NavLink to="/categorias"><Button variant="primary">Rebelion</Button></NavLink></li>
             </ul>
+            <Link to="/item">
+                <h2 className="marcador">Listado</h2>
+            </Link>
             </div>  
         </nav>
     );

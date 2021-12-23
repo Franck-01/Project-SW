@@ -1,21 +1,26 @@
 import { useEffect, useState } from "react"
 import "./styles.css"
 import ItemDetail from "./components/ItemDetail"
+import { useParams } from 'react-router';
 
 const ItemDetailContainer = () => {
 
+    const URL = ("https://mocki.io/v1/b3b2e087-740b-4413-9ab7-3732ce11737f")
+    const {id} = useParams();
+
     const [mensaje, setMensaje] = useState("Cargando API...")
     const [item, setItems] = useState([])
-
+    
     useEffect(()=>{
 
-        const promesa = new Promise((rep, rej) => {
+        const promesa = new Promise((res, rej) => {
 
             setTimeout(() => {
-                if (Math.random() > 0.5) {
-                    rep('https://mocki.io/v1/b3b2e087-740b-4413-9ab7-3732ce11737f')
+                if (id) {
+                    const filtro = URL.filter((x)=> x.id === Number(id))
+                    res(filtro)
                 }else{
-                    rej()
+                    res(URL)
                 }
             }, 2000)
         })

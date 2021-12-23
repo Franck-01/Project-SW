@@ -2,80 +2,30 @@ import {useState} from "react"
 
 const ItemCount = ({ onAdd, initial }) => {
 
-    const stockA = 20;
-    const stockB = 300;
-    const stockC = 240;
-    const stockD = 300;
-    const [dest, contadorA] = useState(1);
-    const [caz, contadorB] = useState(30);
-    const [bomb, contadorC] = useState(12);
-    const [inter, contadorD] = useState(10);
+    const stock = 100;
+    const [counter, setcounter] = useState(1);
 
-    const CDestructores = () => {
-        if (dest < stockA) {
-            contadorA(dest + 1);
+    const agregar = () => {
+        if (counter < stock) {
+            setcounter(counter + 1);
         }
-        console.log("Destructores estelares")
+        console.log("otra para la flota")
     }
-    const destructores = () => {
-        if (dest > initial) {
-            contadorA(dest - 1);
+    const eliminar = () => {
+        if (counter > initial) {
+            setcounter(counter - 1);
         }
-    }
-    const CCazas = () => {
-        if (caz < stockB) {
-            contadorB(caz + 5);
-        }
-        console.log("Cazas de combate")
-    }
-    const cazas = () => {
-        if (caz > initial) {
-            contadorB(caz - 5);
-        }
-    }
-    const CBombarderos = () => {
-        if (bomb < stockC) {
-            contadorC(bomb + 3);
-        }
-        console.log("Bombarderos de presicion")
-    }
-    const bombarderos = () => {
-        if (bomb > initial) {
-            contadorC(bomb - 3);
-        }
-    }
-    const CInterceptores = () => {
-        if (inter < stockD) {
-            contadorD(inter + 2);
-        }
-        console.log("Interceptores de escolta")
-    }
-    const interceptores = () => {
-        if (inter > initial) {
-            contadorD(inter - 2);
-        }
+        console.log("chatarra para Jawas")
     }
 
     return (
         <section>
             <div className="section">
-            <p>{dest}</p>
-            <p>{caz}</p>
-            <p>{bomb}</p>
-            <p>{inter}</p>
+            <p>Cantidad de naves disponibles: {stock}</p>
                 <div>
-                <p>cantidad de destructores: {dest}</p>
-                    <button onClick={CDestructores}>aumentar</button>
-                    <button onClick={destructores}>disminuir</button>
-                <p>cantidad de cazas: {caz}</p>
-                    <button onClick={CCazas}>aumentar</button>
-                    <button onClick={cazas}>disminuir</button>
-                <p>cantidad de bombarderos: {bomb}</p>
-                    <button onClick={CBombarderos}>aumentar</button>
-                    <button onClick={bombarderos}>disminuir</button>
-                <p>cantidad de interceptores: {inter}</p>
-                    <button onClick={CInterceptores}>aumentar</button>
-                    <button onClick={interceptores}>disminuir</button>
+                <p>Tus naves: {counter}</p>
+                    <button onClick={agregar}>aumentar</button>
+                    <button onClick={eliminar}>disminuir</button>
                     <button onClick={() => onAdd()} type='button'>
                         Agrega a tu flota
                     </button>
