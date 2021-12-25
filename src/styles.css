@@ -94,12 +94,13 @@ ul li:hover{
    padding-left: 10%;
 }
 .CardItem {
-   width: 150px;
-   padding: 30px;
+   color: white;
+   width: 80%;
+   height: auto;
    margin: 30px;
-   font-size: 10px;
-   background-color: papayawhip;
-   border: 1px solid #e1e1e1;
+   font-size: 12px;
+   background-color: #400006;
+   border: 2px solid #ffffff;
    border-radius: 10px;
 }
 
@@ -131,7 +132,7 @@ ul li:hover{
    justify-content: center;
    display: flex;
    align-items: center;
-   flex-direction: column;
+   flex-direction: row;
    min-height: 80vh;
    color: black;
 } 
@@ -140,6 +141,9 @@ ul li:hover{
 }
 .ListGroup {
    display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   flex-direction: row;
 }
 .white{
    font-size: 26px;

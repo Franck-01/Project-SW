@@ -6,8 +6,8 @@ const ItemList = ({naves}) => {
     return (
         <div>
             <ul className="ListGroup">
-            {naves.map(naves =>(
-            <Item producto={naves} key={naves.name} naves={naves}/>
+            {naves.filter((naves) => naves.bando === "Republica Galactica").map(naves =>(
+            <Item producto={naves} key={naves.nave} bando={naves.bando} naves={naves}/>
             ))}
         </ul>
         </div>

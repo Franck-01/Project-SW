@@ -5,8 +5,8 @@ import { useParams } from 'react-router';
 
 const ItemDetailContainer = () => {
 
-    const URL = ("https://mocki.io/v1/b3b2e087-740b-4413-9ab7-3732ce11737f")
-    const {id} = useParams();
+    const ship = ("https://mocki.io/v1/54c1f335-fa24-4adc-8e5e-a519387f384d")
+    const {bando} = useParams();
 
     const [mensaje, setMensaje] = useState("Cargando API...")
     const [item, setItems] = useState([])
@@ -16,11 +16,11 @@ const ItemDetailContainer = () => {
         const promesa = new Promise((res, rej) => {
 
             setTimeout(() => {
-                if (id) {
-                    const filtro = URL.filter((x)=> x.id === Number(id))
+                if (bando) {
+                    const filtro = ship.filter((ship)=> ship.bando === bando)
                     res(filtro)
                 }else{
-                    res(URL)
+                    res(ship)
                 }
             }, 2000)
         })

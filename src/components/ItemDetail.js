@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import "./../styles.css"
 
@@ -8,7 +7,7 @@ const ItemDetail = () => {
 
     useEffect(()=>{
 
-        fetch('https://mocki.io/v1/b3b2e087-740b-4413-9ab7-3732ce11737f')
+        fetch("https://mocki.io/v1/54c1f335-fa24-4adc-8e5e-a519387f384d")
             .then(res=>res.json())
             .then(json=>{
                 setItems(json)
@@ -20,11 +19,11 @@ const ItemDetail = () => {
     return (
         <div>
             <ul>
-            {items.map(items=>(
-                <li key={items.name}>
-                    <h3>{items.name}</h3>
-                    <h4>{items.model}</h4>
-                    <p>{items.description}</p>
+            {items.filter((items) => items.bando === "Republica Galactica").map(items=>(
+                <li key={items.nave.name}>
+                    <h3>{items.nave.name}</h3>
+                    <h4>{items.nave.model}</h4>
+                    <p>{items.nave.description}</p>
                 </li>
             ))}
             </ul>

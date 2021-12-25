@@ -7,19 +7,18 @@ import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
 
-    const {id} = useParams();
-    console.log(id)
+    const {bando} = useParams();
 
     const [mensaje, setMensaje] = useState("cargando los archivos...")
     const [productos,setProductos] = useState([])
 
     useEffect(() => {
 
-        const promesa = new Promise((res) => {
+        const promesa = new Promise((res, rej) => {
 
             setTimeout(() => {
-                if (id) {
-                    const filtro = naves.filter((x)=> x.categoria === id)
+                if (!bando) {
+                    const filtro = naves.filter((naves) => naves.bando === bando)
                     res(filtro)
                 }else{
                     res(naves)
@@ -34,7 +33,7 @@ const ItemListContainer = () => {
             .catch(() => {
                 setMensaje("Algo fallo")
             })
-    }, [id])
+    }, [bando])
     
     return (
         <div className="ItemListContainer">
