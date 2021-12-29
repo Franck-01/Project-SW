@@ -1,23 +1,18 @@
-import ItemCount from "../ItemCount";
+import { Link } from "react-router-dom";
 import "./../styles.css"
 
 const Item = ({naves}) => {
     
-    const handleOnAdd = () => {
-        console.log("otra a la lista");
-    }
-
     return (
         <div className="CardItem">
             <div className="ContainerItem">
                 <h2 className="ItemHeader">
-                    {naves.nave.name} 
+                    Clase de nave : <i>{naves.nave.name} </i>
                 </h2>
             </div>
+            <h3><Link to={`/item/${naves.nave.name}`}>detalles</Link></h3>
             <img src={naves.nave.img_url} alt={naves.nave.name} className="ItemImg"/>
-            <h4>{naves.nave.model}</h4>
-                <p>{naves.nave.description}</p>
-            <ItemCount stock={naves.stock} onAdd={handleOnAdd} initial={1}/>
+            <h4>Modelo de nave : <i>{naves.nave.model}</i></h4>
             
         </div>
     )

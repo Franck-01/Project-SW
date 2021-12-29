@@ -1,31 +1,30 @@
-import { useEffect, useState } from "react"
 import "./../styles.css"
+import ItemCount from "../ItemCount"
+import {useState} from "react"
+import { Link } from "react-router-dom"
 
-const ItemDetail = () => {
+const ItemDetail = ({item}) => {
 
-    const [items, setItems] = useState([])
+    const [agregado, setagregado] = useState(false)
+    const [contador, setcontador] = useState()
 
-    useEffect(()=>{
-
-        fetch("https://mocki.io/v1/54c1f335-fa24-4adc-8e5e-a519387f384d")
-            .then(res=>res.json())
-            .then(json=>{
-                setItems(json)
-            })
-            .catch(err=>console.log(err))
-
-    },[])
+    const handleOnAdd = (contador) => {
+        console.log(contador);
+        setagregado(true)
+        setcontador(contador)
+    }
+    
 
     return (
         <div>
             <ul>
-            {items.filter((items) => items.bando === "Republica Galactica").map(items=>(
-                <li key={items.nave.name}>
-                    <h3>{items.nave.name}</h3>
-                    <h4>{items.nave.model}</h4>
-                    <p>{items.nave.description}</p>
+                <li>
+                    <h2>Clase de nave : <i>{item.nave.name}</i></h2>
+                    <img src={item.nave.img_url} alt={item.nave.name} className="ItemImg"/>
+                    <h4>Modelo de nave : <i>{item.nave.model}</i></h4>
+                    <p>{item.nave.description}</p>
+                    {agregado? <Link to=""><button>finalizar compra</button></Link>:<ItemCount model={item.nave.name} stock={item.nave.stock} onAdd={handleOnAdd} initial={1}/>}
                 </li>
-            ))}
             </ul>
         </div>
     )

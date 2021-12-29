@@ -7,8 +7,8 @@ const Principal = () => {
     return (
         <>
             <Routes>
-                <Route path="/categorias" element={<ItemListContainer/>}/>
-                <Route path="/item" element={<ItemDetailContainer/>}/>
+                <Route path="/categorias/:bando" element={<ItemListContainer/>}/>
+                <Route path="/item/:id" element={<ItemDetailContainer/>}/>
             </Routes>
         </>
     )

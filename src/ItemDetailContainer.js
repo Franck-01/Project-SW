@@ -2,11 +2,11 @@ import { useEffect, useState } from "react"
 import "./styles.css"
 import ItemDetail from "./components/ItemDetail"
 import { useParams } from 'react-router';
+import naves from "./components/naves.json"
 
 const ItemDetailContainer = () => {
 
-    const ship = ("https://mocki.io/v1/54c1f335-fa24-4adc-8e5e-a519387f384d")
-    const {bando} = useParams();
+    const {id} = useParams();
 
     const [mensaje, setMensaje] = useState("Cargando API...")
     const [item, setItems] = useState([])
@@ -16,12 +16,8 @@ const ItemDetailContainer = () => {
         const promesa = new Promise((res, rej) => {
 
             setTimeout(() => {
-                if (bando) {
-                    const filtro = ship.filter((ship)=> ship.bando === bando)
-                    res(filtro)
-                }else{
-                    res(ship)
-                }
+                const filtro = naves.filter((naves)=> naves.nave.name === id)
+                res(filtro)
             }, 2000)
         })
         promesa
@@ -33,7 +29,7 @@ const ItemDetailContainer = () => {
                 setMensaje("Cargando los archivos")
 
             })
-    },[])
+    },[id])
 
     if(item.length === 0){
         return (
@@ -44,7 +40,7 @@ const ItemDetailContainer = () => {
     }else{
         return (
             <div>
-                <ItemDetail/>
+                <ItemDetail item={item[0]}/>
             </div>
         )
     }

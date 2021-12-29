@@ -1,8 +1,7 @@
 import {useState} from "react"
 
-const ItemCount = ({ onAdd, initial }) => {
+const ItemCount = ({ onAdd, initial, stock, model }) => {
 
-    const stock = 100;
     const [counter, setcounter] = useState(1);
 
     const agregar = () => {
@@ -21,12 +20,12 @@ const ItemCount = ({ onAdd, initial }) => {
     return (
         <section>
             <div className="section">
-            <p>Cantidad de naves disponibles: {stock}</p>
+            <p>Cantidad de naves disponibles clase <i>{model}</i> : {stock}</p>
                 <div>
                 <p>Tus naves: {counter}</p>
                     <button onClick={agregar}>aumentar</button>
                     <button onClick={eliminar}>disminuir</button>
-                    <button onClick={() => onAdd()} type='button'>
+                    <button onClick={() => onAdd(counter)} type='button'>
                         Agrega a tu flota
                     </button>
                 </div>
