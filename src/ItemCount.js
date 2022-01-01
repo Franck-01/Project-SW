@@ -19,14 +19,14 @@ const ItemCount = ({ onAdd, initial, stock, model }) => {
 
     return (
         <section>
-            <div className="section">
+            <div className="ItemCount">
             <p>Cantidad de naves disponibles clase <i>{model}</i> : {stock}</p>
                 <div>
                 <p>Tus naves: {counter}</p>
-                    <button onClick={agregar}>aumentar</button>
-                    <button onClick={eliminar}>disminuir</button>
+                    <button onClick={agregar}><b>aumentar</b></button>
+                    <button onClick={eliminar}><b>disminuir</b></button>
                     <button onClick={() => onAdd(counter)} type='button'>
-                        Agrega a tu flota
+                    <b>Agrega a tu flota</b>
                     </button>
                 </div>
             </div>

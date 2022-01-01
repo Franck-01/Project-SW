@@ -59,26 +59,50 @@ nav{
    height: 100%;
    border: 2px dashed white;
 }
-.section{
-	background-color: white;
-   text-align: left;
+.ItemDetail{
+   background-image: url("https://www.logolynx.com/images/logolynx/46/466b40882cc9a58ff5756e14032101c6.jpeg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.ItemDetail button{
+   background: rgb(255,255,255);
+   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 100%);
+   color: white;
+   padding: 1%;
+}
+.ItemCount{
+   text-align: center;
    font-weight: 600;
-   color:black;
-   margin: 0;
+   color:white;
+   margin-right: 20%;
+   margin-left: 20%;
    padding: 20px;
+}
+.ItemCount button{
+   background: rgb(255,255,255);
+   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 100%);
+   color: white;
+   padding: 1%;
+   margin-left: 4%;
+   margin-right: 4%;
 }
 .aspecto{
    background-color: darkblue;
    font-weight: 600;
+   font-size: 20px;
+   color: white;
 }
 .marcador{
    font-size: 22px;
    color: white;
    background-color: rgb(5, 96, 233);
 }
-.aspecto ul{
-   font-size: 20px;
-   color: white;
+.lista h2{
+   padding-left: 5%;
+   padding-right: 5%;
+   padding-top: 10px;
+   padding-bottom: 10px;
 }
 .black{
    color: black;
@@ -96,29 +120,26 @@ nav{
    height: auto;
    margin: 30px;
    font-size: 12px;
-   background-color: #400006;
+   background: rgb(255,0,0);
+   background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(122,0,0,1) 27%, rgba(0,0,0,1) 100%);
    border: 2px solid #ffffff;
    border-radius: 10px;
 }
-
 .ContainerItem {
    display: flex;
    flex-direction: column;
    margin-bottom: 10px;
    border-radius: 25px;
 }
-
 .ItemHeader {
    display: flex;
    justify-content: center;
 }
-
 .Info {
    font-size: 16px;
    display: flex;
    justify-content: space-around;
 }
-
 .ItemImg {
    width: 100px;
    height: 100px;
@@ -152,4 +173,15 @@ footer {
    background-color: rgb(1, 0, 63);
    text-align: center;
    padding: 0.5rem;
+}
+.inferno img{
+   text-align: left;
+   height: 48px;
+   padding-right: 10%;
+   padding-left: 10%;
+}
+.inferno button{
+   background: rgb(255,255,255);
+   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 100%);
+   border-color: transparent;
 }

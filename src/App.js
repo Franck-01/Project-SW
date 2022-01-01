@@ -1,17 +1,18 @@
 import Header from "./Header"
 import Principal from "./Principal"
 import { BrowserRouter, Router} from "react-router-dom"
-import Events from "./Events"
 import Footer from "./Footer"
+import CartContext from "./components/CartContext"
 
 const App = () => {
 
     return (
         <>
             <BrowserRouter>
-                <Header/>
-                <Events/>
-                <Principal/>
+                <CartContext>
+                    <Header/>
+                    <Principal/>
+                </CartContext>    
             </BrowserRouter>
             <Footer/>
         </>
