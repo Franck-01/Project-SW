@@ -1,10 +1,12 @@
+import "./../styles.css"
+
 const Cart = ({children}) => {
 
     return (
         <>
-            <div>
+            <div className="back">
                 <h2>Aqui esta tu flota:</h2>
-                {children}
+                <p>{children}</p>
             </div>
         </>
     )

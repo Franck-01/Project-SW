@@ -8,7 +8,7 @@ const ItemDetailContainer = () => {
 
     const {id} = useParams();
 
-    const [mensaje, setMensaje] = useState("Cargando API...")
+    const [mensaje, setMensaje] = useState("Solicitando Información")
     const [item, setItems] = useState([])
     
     useEffect(()=>{
@@ -18,7 +18,8 @@ const ItemDetailContainer = () => {
             setTimeout(() => {
                 const filtro = naves.filter((naves)=> naves.nave.name === id)
                 res(filtro)
-            }, 2000)
+                console.log(filtro)
+            }, 1000)
         })
         promesa
             .then((resultado) => {

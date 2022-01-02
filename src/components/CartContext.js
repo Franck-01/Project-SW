@@ -1,43 +1,42 @@
-import { createContext, useState } from "react"
-import Cart from "./Cart"
+import { createContext, useState, useContext } from "react"
+import naves from "./naves.json"
 
-export const actions = createContext()
+export const context = createContext()
 
-const { Target } = actions
+export const {Provider} = context;
 
-const CartContext = ({children}) => {
-    const [flota, setFlota] = useState([])
+const CartContext =({children}) => {
+    const [fleet, setFleet] = useState(naves)
 
-    const agregarNave = (ship,counter) => {
-        if (IsInCart(ship.name)){
+    const addShip = (ship) => {
+        if (IsInCart(ship)){
             console.log("Ya tienes esta nave")
         }else{
             console.log("Agregando nave")
-            ship.counter = counter;
-            setFlota([flota, ship])
+            setFleet([...fleet, ship])
         }
     }
-    console.log(flota)
 
     const IsInCart = (name) => {
-        console.log(name)
-            const selector = flota.find((naves)=> naves.nave.name === name)
+            const selector = fleet.some((naves)=> naves.name === name)
             console.log(selector)
     }
 
-    const eliminarNave = (ship) => {
-        setFlota(ship)
+    const deleteShip = (ship) => {
+        setFleet(ship)
     }
 
-    const Estado = {
-        flota,
-        agregarNave,
-        eliminarNave,
+    const Status = {
+        fleet,
+        addShip,
+        deleteShip
     }
 
-    return <Target value = {Estado}>
-                <Cart children={children}/>
-            </Target>
+    return (
+        <Provider value = {Status}>
+            {children}
+        </Provider>
+    )
 }
 
 export default CartContext

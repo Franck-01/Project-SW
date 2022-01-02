@@ -28,7 +28,7 @@ const ItemListContainer = () => {
         })
         promesa
             .then((resultado) => {
-                setMensaje("Todo bien")
+                setMensaje("")
                 setProductos(resultado)
             })
             .catch(() => {
