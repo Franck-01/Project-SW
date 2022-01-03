@@ -12,7 +12,7 @@ const ItemDetail = ({item}) => {
 
     const handleOnAdd = (contador) => {
         addShip(item.contador)
-        console.log(contador);
+        console.log(contador + "=" + item.nave.model + ":" + item.nave.name);
         setcontador(contador)
     }
 
@@ -22,7 +22,7 @@ const ItemDetail = ({item}) => {
             <img src={item.nave.img_url} alt={item.nave.name} className="ItemImg"/>
             <h4>Modelo de nave : <i>{item.nave.model}</i></h4>
             <p>{item.nave.description}</p>
-                <Link to="/cart"><button><b>finalizar compra</b></button></Link>: <ItemCount model={item.nave.name} stock={item.nave.stock} onAdd={handleOnAdd} initial={1}/>
+            {contador? <Link to="/cart"><button><b>finalizar compra</b></button></Link>: <ItemCount model={item.nave.name} stock={item.nave.stock} onAdd={handleOnAdd} initial={1}/>}
         </div>
     )
 }

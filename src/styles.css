@@ -23,12 +23,31 @@ nav{
    border-bottom: 1px solid black;
    transition: .4s;
 }
+.Rep{
+   margin-top: 1%;
+   margin-bottom: 1%;
+   padding: 2%;
+}
+.CSI{
+   margin-top: 1%;
+   margin-bottom: 1%;
+   padding: 2%;
+}
+.Imp{
+   margin-top: 1%;
+   margin-bottom: 1%;
+   padding: 2%;
+}
+.Reb{
+   margin-top: 1%;
+   margin-bottom: 1%;
+   padding: 2%;
+}
 .Rep:hover{
    background-repeat: no-repeat;
    background-image: url("http://pm1.narvii.com/6285/0abadec238bd7f41a9348356f40bb891411416b7_00.jpg");
    background-position: center;
    background-size: cover;
-   background-attachment: fixed;
    height: 100%;
    border: 2px dashed white;
 }
@@ -37,7 +56,6 @@ nav{
    background-image: url("https://pm1.narvii.com/6439/4b30c61839e4d26bf630955bcc4e0d6b2d625fd6_hq.jpg");
    background-position: center;
    background-size: cover;
-   background-attachment: fixed;
    height: 100%;
    border: 2px dashed white;
 }
@@ -46,7 +64,6 @@ nav{
    background-image: url("http://pm1.narvii.com/6234/ea8781f4d3eb3cd255ff518b8ebb9fb815624f94_00.jpg");
    background-position: center;
    background-size: cover;
-   background-attachment: fixed;
    height: 100%;
    border: 2px dashed white;
 }
@@ -55,7 +72,6 @@ nav{
    background-image: url("https://wallpapercave.com/wp/wp2149431.jpg");
    background-position: center;
    background-size: cover;
-   background-attachment: fixed;
    height: 100%;
    border: 2px dashed white;
 }
@@ -186,7 +202,7 @@ footer {
    border-color: transparent;
 }
 .back{
-   background-image: url("");
+   background-image: url("https://raw.githubusercontent.com/Franck-01/Project-SW/master/public/images/inferno_blue.png");
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;

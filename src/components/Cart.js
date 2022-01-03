@@ -4,9 +4,11 @@ const Cart = ({children}) => {
 
     return (
         <>
-            <div className="back">
+            <div>
                 <h2>Aqui esta tu flota:</h2>
-                <p>{children}</p>
+                <div className="back">
+                    <p>{children}</p>
+                </div>
             </div>
         </>
     )

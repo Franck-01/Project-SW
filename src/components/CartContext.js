@@ -1,14 +1,13 @@
-import { createContext, useState, useContext } from "react"
-import naves from "./naves.json"
+import { createContext, useState} from "react"
 
 export const context = createContext()
 
 export const {Provider} = context;
 
 const CartContext =({children}) => {
-    const [fleet, setFleet] = useState(naves)
+    const [fleet, setFleet] = useState([])
 
-    const addShip = (ship) => {
+    const addShip = (ship, count) => {
         if (IsInCart(ship)){
             console.log("Ya tienes esta nave")
         }else{

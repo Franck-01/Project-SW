@@ -17,13 +17,10 @@ const NavBar = () => {
             <Link to="/">
                 <h2 className="marcador">Inicio</h2>
             </Link>
-            
-            <ul>
-                <li className="Rep"><NavLink to={`/categorias/${republic}`}><Button variant="primary">Republica</Button></NavLink></li>
-                <li className="CSI"><NavLink to={`/categorias/${csi}`}><Button variant="primary">Separatistas</Button></NavLink></li>
-                <li className="Imp"><NavLink to={`/categorias/${empire}`}><Button variant="primary">Imperio</Button></NavLink></li>
-                <li className="Reb"><NavLink to={`/categorias/${rebels}`}><Button variant="primary">Rebelion</Button></NavLink></li>
-            </ul>
+                <h2 className="Rep"><NavLink to={`/categorias/${republic}`}><Button variant="primary">Republica</Button></NavLink></h2>
+                <h2 className="CSI"><NavLink to={`/categorias/${csi}`}><Button variant="primary">Separatistas</Button></NavLink></h2>
+                <h2 className="Imp"><NavLink to={`/categorias/${empire}`}><Button variant="primary">Imperio</Button></NavLink></h2>
+                <h2 className="Reb"><NavLink to={`/categorias/${rebels}`}><Button variant="primary">Rebelion</Button></NavLink></h2>
             <Link to="/item">
                 <h2 className="marcador">Listado</h2>
             </Link>
