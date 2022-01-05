@@ -18,7 +18,6 @@ const ItemDetailContainer = () => {
             setTimeout(() => {
                 const filtro = naves.filter((naves)=> naves.nave.name === id)
                 res(filtro)
-                console.log(filtro)
             }, 1000)
         })
         promesa

@@ -11,8 +11,7 @@ const ItemDetail = ({item}) => {
     const {addShip} = useContext(context)
 
     const handleOnAdd = (contador) => {
-        addShip(item.contador)
-        console.log(contador + "=" + item.nave.model + ":" + item.nave.name);
+        addShip(item, contador)
         setcontador(contador)
     }
 
@@ -22,7 +21,7 @@ const ItemDetail = ({item}) => {
             <img src={item.nave.img_url} alt={item.nave.name} className="ItemImg"/>
             <h4>Modelo de nave : <i>{item.nave.model}</i></h4>
             <p>{item.nave.description}</p>
-            {contador? <Link to="/cart"><button><b>finalizar compra</b></button></Link>: <ItemCount model={item.nave.name} stock={item.nave.stock} onAdd={handleOnAdd} initial={1}/>}
+                <Link to="/"><button><b>Volver al inicio</b></button></Link>{contador? <Link to="/cart"><button><b>finalizar compra</b></button></Link>: <ItemCount model={item.nave.name} stock={item.nave.stock} onAdd={handleOnAdd} initial={1}/>}
         </div>
     )
 }
