@@ -3,5 +3,6 @@ import ReactDOM from "react-dom";
 import "./styles.css"
 import App from "./App";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./firebase"
 
 ReactDOM.render( <App/> ,document.getElementById("root"));

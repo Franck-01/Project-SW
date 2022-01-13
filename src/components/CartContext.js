@@ -9,10 +9,10 @@ const CartContext =({children}) => {
         console.log(fleet)
         
     const addShip = (ship, count) => {
-        if (IsInCart(ship.nave.name)){
-            const duplicated= fleet.find((duplicatedShip)=> duplicatedShip.nave.name === ship.nave.name)
+        if (IsInCart(ship.name)){
+            const duplicated= fleet.find((duplicatedShip)=> duplicatedShip.name === ship.name)
             duplicated.count = duplicated.count + count
-            const rest= fleet.filter((restShip)=> restShip.nave.name !== ship.nave.name)
+            const rest= fleet.filter((restShip)=> restShip.name !== ship.name)
             setFleet([...rest, duplicated])
             console.log("Ya tienes esta nave")
         }else{
@@ -22,10 +22,10 @@ const CartContext =({children}) => {
         }
     }
 
-    const IsInCart = (name) => fleet.some((naves)=> naves.nave.name === name)
+    const IsInCart = (name) => fleet.some((naves)=> naves.name === name)
 
     const deleteShip = (ship) => {
-        setFleet(fleet.filter((remove)=> remove.nave.name !== ship.nave.name)
+        setFleet(fleet.filter((remove)=> remove.name !== ship.name)
     )}
 
     const clearFleet = () => {

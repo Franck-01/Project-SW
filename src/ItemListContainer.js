@@ -2,43 +2,49 @@ import React from 'react';
 import ItemList from './components/ItemList'
 import "./styles.css"
 import { useState, useEffect } from "react"
-import naves from "./components/naves.json"
 import { useParams } from 'react-router-dom';
+import { store } from './firebase';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 const ItemListContainer = () => {
 
     const {bando} = useParams();
     console.log(bando)
-    
-    const [mensaje, setMensaje] = useState("cargando los archivos...")
     const [productos,setProductos] = useState([])
+
+    const reset = (arraydoc) => {
+        setProductos(arraydoc.map(documento=>{
+            return {...documento.data(), bando: documento.bando}
+        }))
+    }
+
+    const pedido = async () =>{
+
+        const listado = collection(store, "naves")
+        const consulta = await getDocs(listado)
+        reset(consulta.docs)
+    }
+    const porSector = async () => {
+        const listado = collection(store, "naves")
+        const cont1 = where("bando", "==", bando)
+        const queryn = query(listado, cont1)
+        const consulta = await getDocs(queryn)
+        reset(consulta.docs)
+    }
+     
 
     useEffect(() => {
 
-        const promesa = new Promise((res, rej) => {
+        if(bando){
+            porSector()
+        }else{
+            pedido()
+        }
 
-            setTimeout(() => {
-                if (bando) {
-                    const filtro = naves.filter((naves) => naves.bando === bando)
-                    res(filtro)
-                }else{
-                    res(naves)
-                }
-            }, 2000)
-        })
-        promesa
-            .then((resultado) => {
-                setMensaje("")
-                setProductos(resultado)
-            })
-            .catch(() => {
-                setMensaje("Algo fallo")
-            })
     }, [bando])
-    
+
     return (
         <div className="ItemListContainer">
-            <p className='mensaje'>{mensaje}</p>
             <ItemList productos={productos}/>
         </div>
 

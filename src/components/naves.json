@@ -15,7 +15,7 @@
             "name": "Acclamator",
             "model": "Carguero",
             "img_url": "https://http2.mlstatic.com/D_906921-MLA44573130160_012021-O.jpg",
-            "description": "Cumple un papel como carguero de tropas, aunque es cumple la función de apoyo para los Destructores clase Venator. Cuenta con un armamento de 12 cañones turboláser cuádruples y 24 cañones láser de defensa media, una nave hecha en combate medio y cercano",
+            "description": "Cumple un papel como carguero de tropas, aunque tambien cumple la función de apoyo para los Destructores clase Venator. Cuenta con un armamento de 12 cañones turboláser cuádruples y 24 cañones láser de defensa media, una nave hecha en combate medio y cercano",
             "stock": 70
         }    
     },
@@ -85,7 +85,7 @@
             "name": "Lucrehulk",
             "model": "Carguero mejorado",
             "img_url": "https://pm1.narvii.com/7362/6e742c88cc2f5d7662dcba2e418c4c071fcda246r1-1280-745v2_hq.jpg",
-            "description": "Tiene la capacidad para transportar más de 300 naves de combate y más de 100 naves de aterrizaje terrestre",
+            "description": "Tiene la capacidad para transportar más de 500 naves de combate y más de 100 naves de aterrizaje terrestre",
             "stock": 20
         }
     },

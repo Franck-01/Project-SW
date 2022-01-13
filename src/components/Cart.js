@@ -4,7 +4,7 @@ import "./../styles.css"
 import { context } from "./CartContext";
 
 const Cart = () => {
-    const {fleet, deleteShip, clearFleet} = useContext(context)
+    const {fleet, deleteShip, clearFleet, count} = useContext(context)
 
     return (
         <>   
@@ -14,9 +14,9 @@ const Cart = () => {
                     <ul>
                     {fleet.map((element) =>(
                         <li>
-                            <h2>{element.nave.name}</h2>
-                            <h3>{element.nave.model}</h3>
-                            <img src={element.nave.img_url} alt={element.nave.name} className="ItemImg"/>
+                            <h2>{element.name}</h2>
+                            <h3>{element.model}</h3>
+                            <img src={element.img_url} alt={element.name} className="ItemImg"/>
                             <button onClick={()=>{deleteShip(element.name)}}>Borrar elemento</button>
                             <button onClick={()=>{clearFleet(fleet)}}>Borrar todo</button>
                         </li>

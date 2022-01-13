@@ -24,24 +24,28 @@ nav{
    transition: .4s;
 }
 .Rep{
-   margin-top: 2px;
-   margin-bottom: 2px;
-   padding: 2px;
+   padding-right: 2px;
+   padding-left: 2px;
+   padding-bottom: 10px;
+   padding-top: 6px;
 }
 .CSI{
-   margin-top: 2px;
-   margin-bottom: 2px;
-   padding: 2px;
+   padding-right: 2px;
+   padding-left: 2px;
+   padding-bottom: 10px;
+   padding-top: 6px;
 }
 .Imp{
-   margin-top: 2px;
-   margin-bottom: 2px;
-   padding: 2px;
+   padding-right: 2px;
+   padding-left: 2px;
+   padding-bottom: 10px;
+   padding-top: 6px;
 }
 .Reb{
-   margin-top: 2px;
-   margin-bottom: 2px;
-   padding: 2px;
+   padding-right: 2px;
+   padding-left: 2px;
+   padding-bottom: 10px;
+   padding-top: 6px;
 }
 .Rep:hover{
    background-repeat: no-repeat;
@@ -49,7 +53,6 @@ nav{
    background-position: center;
    background-size: cover;
    height: 100%;
-   border: 2px dashed white;
 }
 .CSI:hover{
    background-repeat: no-repeat;
@@ -57,7 +60,6 @@ nav{
    background-position: center;
    background-size: cover;
    height: 100%;
-   border: 2px dashed white;
 }
 .Imp:hover{
    background-repeat: no-repeat;
@@ -65,7 +67,6 @@ nav{
    background-position: center;
    background-size: cover;
    height: 100%;
-   border: 2px dashed white;
 }
 .Reb:hover{
    background-repeat: no-repeat;
@@ -73,7 +74,6 @@ nav{
    background-position: center;
    background-size: cover;
    height: 100%;
-   border: 2px dashed white;
 }
 .ItemDetail{
    background-image: url("https://www.logolynx.com/images/logolynx/46/466b40882cc9a58ff5756e14032101c6.jpeg");

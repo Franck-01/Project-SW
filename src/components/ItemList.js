@@ -7,7 +7,7 @@ const ItemList = ({productos}) => {
         <div>
             <ul className="ListGroup">
             {productos.map(naves =>(
-            <Item producto={naves} key={naves.nave} bando={naves.bando} naves={naves}/>
+            <Item producto={naves} key={naves} naves={naves}/>
             ))}
         </ul>
         </div>
