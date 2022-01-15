@@ -11,41 +11,24 @@ const ItemDetailContainer = () => {
 
     const [item, setItems] = useState([])
 
-    const reset = (arraydoc) => {
-        setItems(arraydoc.map(documento=>{
-            return {...documento.data(), id: documento.id}
-        }))
-    }
-
-    const pedido = async () =>{
-
-        const listado = collection(store, "naves")
-        const referencia = doc(listado, id)
-        const documento = await getDocs(referencia)
-        setItems({ ...documento.data(), id: documento.id})
-    }
     const porSector = async () => {
-        const listado = collection(store, "naves")
-        const cont1 = where("name", "==", id)
-        const queryn = query(listado, cont1)
-        const consulta = await getDocs(queryn)
-        reset(consulta.docs)
-    }
+         const listado = collection(store, "naves")
+        const reff = doc(listado, id)
+        const documento = await getDocs(reff)
+        setItems({...documento.data(), id: documento.id})
+    } 
      
 
     useEffect(() => {
 
-        if(id){
-            porSector()
-        }else{
-            pedido()
-        }
+        porSector()
+
     },[id])
 
     
     return (
         <div>
-            <ItemDetail item={item[0]}/>
+            <ItemDetail naves={item[0]}/>
         </div>
     )
     

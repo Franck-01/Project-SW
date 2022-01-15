@@ -8,6 +8,7 @@ const NavBar = () => {
     const csi = "Alianza Separatista"
     const empire = "Imperio Galactico"
     const rebels = "Alianza Rebelde"
+    const id = ""
 
     
     return (
@@ -21,9 +22,9 @@ const NavBar = () => {
                 <h2 className="CSI"><NavLink to={`/categorias/${csi}`}><Button variant="primary">Separatistas</Button></NavLink></h2>
                 <h2 className="Imp"><NavLink to={`/categorias/${empire}`}><Button variant="primary">Imperio</Button></NavLink></h2>
                 <h2 className="Reb"><NavLink to={`/categorias/${rebels}`}><Button variant="primary">Rebelion</Button></NavLink></h2>
-            <Link to="/item">
+            <NavLink to={`/item/${id}`}>
                 <h2 className="marcador">Listado</h2>
-            </Link>
+            </NavLink>
             </div>  
         </nav>
     );

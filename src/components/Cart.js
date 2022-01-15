@@ -1,10 +1,52 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./../styles.css"
 import { context } from "./CartContext";
+import { store } from "../firebase";
+import {addDoc, collection} from "firebase/firestore"
+import validator from "validator"
+import { toast } from "react-toastify"
 
 const Cart = () => {
     const {fleet, deleteShip, clearFleet, count} = useContext(context)
+
+    const [loading, setLoading] = useState(false)
+    const [id, setId] = useState("")
+    const [nombre, setNombre] = useState("")
+    const [error, setError] = useState("")
+
+    const guardado = async ()=> {
+        const valido = validator.isAlpha(nombre)
+
+        if(valido){
+            setLoading(true)
+            const compra ={
+                compra: fleet,
+                usuario: {
+                    nombre,
+                    email: "email@email.com",
+                    telefono: "135792468"
+                },
+                total: 100
+            }
+
+            const ordenCollection = collection(store, "compra")
+
+            const reff = await addDoc(ordenCollection, compra)
+            const id = reff.id
+
+            setLoading(false)
+            setId(id)
+            clearFleet()
+            setNombre("")
+            setError("")
+            toast.success("Compra exitosa")
+        }else{
+            const alert = "Nombre erroneo"
+            setError(alert)
+            toast.error(alert)
+        }
+    }
 
     return (
         <>   
