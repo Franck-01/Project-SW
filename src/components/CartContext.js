@@ -6,6 +6,7 @@ export const {Provider} = context;
 
 const CartContext =({children}) => {
     const [fleet, setFleet] = useState([])
+    const [count, setCount] = useState(0)
         console.log(fleet)
         
     const addShip = (ship, count) => {
@@ -14,6 +15,7 @@ const CartContext =({children}) => {
             duplicated.count = duplicated.count + count
             const rest= fleet.filter((restShip)=> restShip.name !== ship.name)
             setFleet([...rest, duplicated])
+            setCount(count)
             console.log("Ya tienes esta nave")
         }else{
             console.log("Agregando nave")
@@ -29,7 +31,8 @@ const CartContext =({children}) => {
     )}
 
     const clearFleet = () => {
-        setFleet([])  
+        setFleet([])
+        setCount(0)  
     }
 
     return (

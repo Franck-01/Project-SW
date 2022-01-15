@@ -59,6 +59,7 @@ const Cart = () => {
                             <h2>{element.name}</h2>
                             <h3>{element.model}</h3>
                             <img src={element.img_url} alt={element.name} className="ItemImg"/>
+                            <h3>cantidad de naves : {count}</h3>
                             <button onClick={()=>{deleteShip(element.name)}}>Borrar elemento</button>
                             <button onClick={()=>{clearFleet(fleet)}}>Borrar todo</button>
                         </li>
