@@ -26,9 +26,10 @@ const CartContext =({children}) => {
 
     const IsInCart = (name) => fleet.some((naves)=> naves.name === name)
 
-    const deleteShip = (ship) => {
-        setFleet(fleet.filter((remove)=> remove.name !== ship.name)
-    )}
+    const deleteShip = (id) => {
+        const borrar = fleet.filter((remove)=> remove.id !== id)
+        setFleet(borrar)
+    }
 
     const clearFleet = () => {
         setFleet([])

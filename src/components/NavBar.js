@@ -18,10 +18,10 @@ const NavBar = () => {
             <Link to="/">
                 <h2 className="marcador">Inicio</h2>
             </Link>
-                <h2 className="Rep"><NavLink to={`/categorias/${republic}`}><Button variant="primary">Republica</Button></NavLink></h2>
-                <h2 className="CSI"><NavLink to={`/categorias/${csi}`}><Button variant="primary">Separatistas</Button></NavLink></h2>
-                <h2 className="Imp"><NavLink to={`/categorias/${empire}`}><Button variant="primary">Imperio</Button></NavLink></h2>
-                <h2 className="Reb"><NavLink to={`/categorias/${rebels}`}><Button variant="primary">Rebelion</Button></NavLink></h2>
+                <h2 className="Rep"><NavLink to={`/categorias/${republic}`}><Button variant="primary">{republic}</Button></NavLink></h2>
+                <h2 className="CSI"><NavLink to={`/categorias/${csi}`}><Button variant="primary">{csi}</Button></NavLink></h2>
+                <h2 className="Imp"><NavLink to={`/categorias/${empire}`}><Button variant="primary">{empire}</Button></NavLink></h2>
+                <h2 className="Reb"><NavLink to={`/categorias/${rebels}`}><Button variant="primary">{rebels}</Button></NavLink></h2>
             <NavLink to={`/item/${id}`}>
                 <h2 className="marcador">Listado</h2>
             </NavLink>
