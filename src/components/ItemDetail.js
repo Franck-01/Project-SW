@@ -21,7 +21,8 @@ const ItemDetail = ({item}) => {
             <img src={item.img_url} className="ItemImg"/>
             <h4>Modelo de nave : <i>{item.model}</i></h4>
             <p>{item.description}</p>
-            {contador? <Link to="/cart"><button><b>finalizar compra</b></button></Link>: <ItemCount model={item.name} stock={item.stock} onAdd={handleOnAdd} initial={1}/>}
+            <p>Precio por naves : <i>{item.cost} 000</i></p>
+            {contador? <Link to="/cart"><button><b>finalizar compra</b></button></Link>: <ItemCount cost={item.cost} model={item.name} stock={item.stock} onAdd={handleOnAdd} initial={1}/>}
         </div>
     )
 }
