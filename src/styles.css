@@ -81,6 +81,10 @@ nav{
    background-repeat: no-repeat;
    background-size: cover;
 }
+.ItemDetail estilo{
+   margin-right: 6%;
+   margin-left: 6%;
+}
 .ItemDetail button{
    background: rgb(255,255,255);
    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 100%);
@@ -102,6 +106,12 @@ nav{
    padding: 1%;
    margin-left: 4%;
    margin-right: 4%;
+}
+.ItemCount img{
+   text-align: left;
+   height: 48px;
+   padding-right: 10px;
+   padding-left: 10px;
 }
 .aspecto{
    background-color: darkblue;
@@ -216,6 +226,14 @@ footer {
    margin-right: 4%;
 }
 .boton{
+   background: rgb(255,255,255);
+   background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 100%);
+   color: white;
+   padding: 1%;
+   margin-left: 4%;
+   margin-right: 4%;
+}
+.botones{
    background: rgb(255,255,255);
    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 100%);
    color: white;

@@ -1,4 +1,4 @@
-import CartWidget from "./CartWidget";
+import CartWidget from "../Cart/CartWidget";
 import Button from 'react-bootstrap/Button'
 import {NavLink, Link} from 'react-router-dom'
 

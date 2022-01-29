@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react"
-import "./styles.css"
-import ItemDetail from "./components/ItemDetail"
+import "../styles.css"
+import ItemDetail from "./ItemDetail"
 import { useParams } from 'react-router';
-import { store } from './firebase';
+import { store } from '../firebase/firebase';
 import { getDoc, doc} from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
 
     const {id} = useParams();
-    console.log("id : ", id)
     const [item, setItems] = useState([])
 
 
@@ -19,7 +18,6 @@ const ItemDetailContainer = () => {
             const listado = { id: queryn.id, ...queryn.data() }
             setItems(listado)
         }).catch((error) => {
-            console.log("surgio un error", error)
         })
         
         return (() => {

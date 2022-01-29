@@ -1,8 +1,9 @@
 import Header from "./Header"
 import Principal from "./Principal"
-import { BrowserRouter, Router} from "react-router-dom"
+import { BrowserRouter} from "react-router-dom"
 import Footer from "./Footer"
-import CartContext from "./components/CartContext"
+import CartContext from "./context/CartContext"
+import  {ToastContainer} from "react-toastify"
 
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
                 <CartContext>
                     <Header/>
                     <Principal/>
+                    <ToastContainer/>
                 </CartContext>    
             </BrowserRouter>
             <Footer/>

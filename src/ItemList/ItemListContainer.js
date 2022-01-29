@@ -1,15 +1,14 @@
 import React from 'react';
-import ItemList from './components/ItemList'
-import "./styles.css"
+import ItemList from './ItemList'
+import "../styles.css"
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom';
-import { store } from './firebase';
+import { store } from '../firebase/firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 
 const ItemListContainer = () => {
 
     const {bando} = useParams();
-    console.log(bando)
     const [productos,setProductos] = useState([])
 
     const reset = (arraydoc) => {
